@@ -1,0 +1,52 @@
+.display-block {
+    display: block;
+}
+
+.container{
+    display: block;
+}
+
+.inline-block{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right:20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgb(243, 243, 243);
+}
+
+.button{
+    width: 60px;
+    height:30px;
+    margin-right: 5px;
+}
+
+.padding-2{
+    margin-top: 10px;
+}
+
+body{
+    background-color: rgb(249, 249, 249);
+}
+
+.color-brickRed{
+    color:rgb(198, 89, 17);
+}
+
+.color-red{
+    color: red;
+}
+
+.text-small{
+    font-size: 0.8rem;
+    font-weight: light;
+}
+

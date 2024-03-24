@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Kingdom Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div>
+            <h1>王都創世物語-覺醒鑽石計算</h1>
+        </div>
+
+        <div class="tool">
+            <div class="card">
+                <div>
+                    <form id="form">
+
+                        <div class="display-block">
+                            <h4>基本設置</h4>
+                            <div class="inline-block">
+                                <div class="inline-block">
+                                    <label for="diamond-book">鑽石之書(本)</label>
+                                    <select name="diamond-book" id="diamond-book" required>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>                
+                                </div>
+                                <div class="inline-block">
+                                    <label for="awakening-book">覺醒之書(本)</label>
+                                    <select name="awakening-book" id="awakening-book" required>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="inline-block ">
+                                <p class="color-brickRed">
+                                    **單個小人最高覺醒<span id="max-awakening">5</span>次**
+                                </p>
+                            </div>
+
+                        </div>
+                        <div>
+
+                            <div class="inline-block">
+                                <h4>父母1 <span class="color-red text-small" id="p1-reminder" hidden>**提示：目前總覺醒不能超過目標覺醒**</span></h4>
+                                <div>
+                                    <label for="parent1-target">目標</label>
+                                    <input class="medium" type="number" id="parent1-target" min="0" max="5" value="0" required>
+                                    <label>覺</label>
+                                </div>
+                                <div>
+                                    <label for="parent1-current-awakening">目前覺醒</label>
+                                    <input class="small" type="number" name="time" id="parent1-current-awakening" min="0" max="5" value="0" required >
+                                    <label>次</label>
+                                    <input class="small"type="number" name="point" id="parent1-current-point" min="0" max="95" value="0" step="5" required>
+                                    <label>點</label>
+                                </div>
+                            </div>
+
+                            <div class="inline-block">
+                                <h4>父母2 <span class="color-red text-small" id="p2-reminder" hidden>**提示：目前總覺醒不能超過目標覺醒**</span></h4>
+                                <div>
+                                    <label for="parent2-target">目標</label>
+                                    <input class="medium" type="number" id="parent2-target" min="0" max="5" value="0" required >
+                                    <label>覺</label>
+                                </div>
+                                <div>                         
+                                    <label for="parent2-current-awakening">目前覺醒</label>
+                                    <input class="small" type="number" name="time" id="parent2-current-awakening" min="0" max="5" value="0" required>
+                                    <label>次</label>
+                                    <input class="small" type="number" name="point" id="parent2-current-point" min="0" max="95" value="0" step="5" required>
+                                    <label>點</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="padding-2">                        
+                            <button class="button" id="submit">計算</button>     
+                            <button class="button" type="button" id="default">重設</button>
+                        </div>
+                    </form>
+                    <hr>
+                    <div>
+                        <h4>結果  <span class="color-red" id="if-update" hidden>**已更新**</span></h4>
+                        <p>父母1需要<span class="result color-brickRed" id="p1-result-display">0</span>個D小人。</ps>
+                        <p>父母2需要<span class="result color-brickRed" id="p2-result-display">0</span>個D小人。</p>                </p>
+                        <p>總共<span class="result color-brickRed" id="total-diamond">0</span>鑽石。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
